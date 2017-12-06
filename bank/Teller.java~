@@ -1,0 +1,33 @@
+public class Teller{
+    public static void main( String[] args){
+	BankAccount max =  new BankAccount();
+	max.setName("Bob");
+	max.setPasswd("password");
+	max.setPin(1234);
+	max.setAcctNum(123456789);
+	max.setBalance(123.45);
+	max.deposit(1.23);
+	System.out.println(max.toString()); //Tests the mutator methods
+
+	max.setPin(1);
+	System.out.println(max.toString()); //Tests what happens when PIN is too small
+	max.setPin(10000000);
+	System.out.println(max.toString()); //Tests what happens when PIN is too large
+
+	max.setAcctNum(413);
+	System.out.println(max.toString()); //Tests what happens when AccNum is too small
+	max.setAcctNum(1000000021);
+	System.out.println(max.toString()); //Tests what happens when AccNum is too large
+      
+	max.setBalance(100);
+	max.withdraw(50); //Tests if withdraw works for valid amounts
+	System.out.println(max.toString());
+	max.withdraw(500); //Tests what happens when you withdraw an invalid ammount
+	System.out.println(max.toString());
+
+	max.setAcctNum(123456789);
+	max.setPasswd("password");
+	max.verify(100000000,1000); //Incorrect info inputed
+	max.verify(999999999,9999); //Correct info inputed
+    }
+}

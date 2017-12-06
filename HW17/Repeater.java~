@@ -1,0 +1,35 @@
+//Colin Hosking, 
+//APCS1 pd08
+//HW17 -- Do I repeat myself?
+//2017-10-17
+
+public class Repeater{
+
+    public static String fenceW(int numPosts){
+	String fen = "|";
+	int num = 0
+
+	while (num < numPosts){
+	    fen += "--|";
+	    num += 1;}
+	
+        return fen; 
+    }
+
+    public static String fenceR(int numPosts){
+	if (numPosts == 1){
+	    return "|";}        //Base case: numPosts = 1
+
+	return fenceR(numPosts - 1) + "--|";  //Recursive case: 
+    }
+
+
+    public static void main(String [] args){
+
+	System.out.println(fenceW(1));
+
+
+
+    
+    }//ends main
+}//ends Repeater
