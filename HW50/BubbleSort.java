@@ -102,7 +102,7 @@ public class BubbleSort {
       ============================================*/
 
  
-    	ArrayList glen = new ArrayList<Integer>();
+      /*	ArrayList glen = new ArrayList<Integer>();
       glen.add(7);
       glen.add(1);
       glen.add(5);
@@ -113,15 +113,17 @@ public class BubbleSort {
       System.out.println( "sorted version of ArrayList glen:\n" 
       + glenSorted );
       System.out.println( "ArrayList glen after sorting:\n" + glen );
-
+*/
      
-      ArrayList coco = populate( 10, 1, 1000 );
+      ArrayList coco = populate( 100000, 1, 100000 );
       System.out.println( "ArrayList coco before sorting:\n" + coco );
       ArrayList cocoSorted = bubbleSort( coco );
       System.out.println( "sorted version of ArrayList coco:\n" 
       + cocoSorted );
       System.out.println( "ArrayList coco after sorting:\n" + coco );
-    
+      System.out.println("done with sorting the unsorted");
+      bubbleSort(cocoSorted);
+      System.out.println("done with sorting the sorted");
           /*==========for AL-returning methods==========
       ============================================*/
 
